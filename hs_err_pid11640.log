@@ -1,0 +1,210 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x0000000700400000 to 0x0000000710400000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3271), pid=11640, tid=15380
+#
+# JRE version:  (11.0.6+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (11.0.6+8-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\lib\idea_rt.jar=55799:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\bin -Dfile.encoding=UTF-8 Solution.ExceptionExample
+
+Host: AMD FX(tm)-6300 Six-Core Processor             , 6 cores, 15G,  Windows 7 , 64 bit Build 7601 (6.1.7601.24520)
+Time: Wed May 13 14:26:49 2020 ?iiaineia a?aiy (ceia) elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000520800):  JavaThread "Unknown thread" [_thread_in_vm, id=15380, stack(0x0000000002380000,0x0000000002480000)]
+
+Stack: [0x0000000002380000,0x0000000002480000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63679a]
+V  [jvm.dll+0x7755bf]
+V  [jvm.dll+0x776c65]
+V  [jvm.dll+0x7772d3]
+V  [jvm.dll+0x25e7f8]
+V  [jvm.dll+0x633c4a]
+V  [jvm.dll+0x628625]
+V  [jvm.dll+0x314a7c]
+V  [jvm.dll+0x314902]
+V  [jvm.dll+0x31a176]
+V  [jvm.dll+0x36650f]
+V  [jvm.dll+0x365f30]
+V  [jvm.dll+0x2f1a78]
+V  [jvm.dll+0x2f2bf6]
+V  [jvm.dll+0x74e707]
+V  [jvm.dll+0x74fe7f]
+V  [jvm.dll+0x373349]
+V  [jvm.dll+0x734e5e]
+V  [jvm.dll+0x3e2b5d]
+V  [jvm.dll+0x3e4ef1]
+C  [java.exe+0x3607]
+C  [java.exe+0x178dc]
+C  [kernel32.dll+0x1556d]
+C  [ntdll.dll+0x5385d]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000000004fec20, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000000000053b000 GCTaskThread "GC Thread#0" [stack: 0x000000001a0b0000,0x000000001a1b0000] [id=15108]
+  0x0000000024000800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000000024120000,0x0000000024220000] [id=10924]
+  0x000000000058a000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000000024280000,0x0000000024380000] [id=8040]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000007fed3f40207]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000000051e250] Heap_lock - owner thread: 0x0000000000520800
+
+Heap address: 0x0000000700400000, size: 4092 MB, Compressed Oops mode: Non-zero based: 0x0000000700400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x000000013f830000 - 0x000000013f877000 	C:\Program Files\Java\jdk-11.0.6\bin\java.exe
+0x00000000779f0000 - 0x0000000077b8f000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007feeaba0000 - 0x000007feeabb3000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x00000000777d0000 - 0x00000000778ef000 	C:\Windows\system32\kernel32.dll
+0x000007fefd770000 - 0x000007fefd7d7000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feff9c0000 - 0x000007feffa9b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feffc40000 - 0x000007feffcdf000 	C:\Windows\system32\msvcrt.dll
+0x000007fefed60000 - 0x000007fefed7f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefebb0000 - 0x000007fefecdc000 	C:\Windows\system32\RPCRT4.dll
+0x00000000778f0000 - 0x00000000779ea000 	C:\Windows\system32\USER32.dll
+0x000007fefdda0000 - 0x000007fefde07000 	C:\Windows\system32\GDI32.dll
+0x000007feff9b0000 - 0x000007feff9be000 	C:\Windows\system32\LPK.dll
+0x000007fefef10000 - 0x000007fefefdb000 	C:\Windows\system32\USP10.dll
+0x000007fefbb60000 - 0x000007fefbd54000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845\COMCTL32.dll
+0x000007fefed80000 - 0x000007fefedf1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefc2a0000 - 0x000007fefc2ac000 	C:\Windows\system32\VERSION.dll
+0x000007fefefe0000 - 0x000007feff00e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefee00000 - 0x000007fefef0b000 	C:\Windows\system32\MSCTF.dll
+0x000007fef9c30000 - 0x000007fef9c33000 	C:\Windows\system32\api-ms-win-core-synch-l1-2-0.DLL
+0x000007fef4d00000 - 0x000007fef4d16000 	C:\Program Files\Java\jdk-11.0.6\bin\vcruntime140.dll
+0x000007fef5160000 - 0x000007fef5164000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x000007fee0320000 - 0x000007fee0416000 	C:\Program Files\Java\jdk-11.0.6\bin\ucrtbase.DLL
+0x000007fef5140000 - 0x000007fef5143000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-core-localization-l1-2-0.dll
+0x000007fef50e0000 - 0x000007fef50e3000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-core-processthreads-l1-1-1.dll
+0x000007fef4d50000 - 0x000007fef4d53000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-core-file-l1-2-0.dll
+0x000007fef4a50000 - 0x000007fef4a53000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-core-timezone-l1-1-0.dll
+0x000007fef4a40000 - 0x000007fef4a43000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-core-file-l2-1-0.dll
+0x000007fef4700000 - 0x000007fef4704000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-string-l1-1-0.dll
+0x000007fef3cf0000 - 0x000007fef3cf3000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x000007fef3ce0000 - 0x000007fef3ce4000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x000007fef3cd0000 - 0x000007fef3cd4000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x000007fee0270000 - 0x000007fee031a000 	C:\Program Files\Java\jdk-11.0.6\bin\msvcp140.dll
+0x000007fef3cc0000 - 0x000007fef3cc3000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x000007fef3cb0000 - 0x000007fef3cb5000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-math-l1-1-0.dll
+0x000007fef3ca0000 - 0x000007fef3ca5000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-multibyte-l1-1-0.dll
+0x000007fef3c90000 - 0x000007fef3c93000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-time-l1-1-0.dll
+0x000007feead80000 - 0x000007feead83000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x000007feead70000 - 0x000007feead73000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x000007feead30000 - 0x000007feead33000 	C:\Program Files\Java\jdk-11.0.6\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x000007fed3c40000 - 0x000007fed4769000 	C:\Program Files\Java\jdk-11.0.6\bin\server\jvm.dll
+0x000007fefa6a0000 - 0x000007fefa6a9000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff960000 - 0x000007feff9ad000 	C:\Windows\system32\WS2_32.dll
+0x000007fefdcb0000 - 0x000007fefdcb8000 	C:\Windows\system32\NSI.dll
+0x000007fef4990000 - 0x000007fef49cb000 	C:\Windows\system32\WINMM.dll
+0x0000000077ba0000 - 0x0000000077ba7000 	C:\Windows\system32\PSAPI.DLL
+0x000007fee8e90000 - 0x000007fee8ea1000 	C:\Program Files\Java\jdk-11.0.6\bin\verify.dll
+0x000007fef7b60000 - 0x000007fef7c85000 	C:\Windows\system32\DBGHELP.DLL
+0x000007fee8850000 - 0x000007fee8879000 	C:\Program Files\Java\jdk-11.0.6\bin\java.dll
+0x000007fee86b0000 - 0x000007fee86df000 	C:\Program Files\Java\jdk-11.0.6\bin\instrument.dll
+0x000007fee8930000 - 0x000007fee8946000 	C:\Program Files\Java\jdk-11.0.6\bin\zip.dll
+0x000007feeac80000 - 0x000007feeac8a000 	C:\Program Files\Java\jdk-11.0.6\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11.0.6\bin;C:\Windows\SYSTEM32;C:\Program Files\AVAST Software\Avast;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845;C:\Program Files\Java\jdk-11.0.6\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\lib\idea_rt.jar=55799:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.4\bin -Dfile.encoding=UTF-8 
+java_command: Solution.ExceptionExample
+java_class_path (initial): C:\Users\Антон\IdeaProjects\untitled1\out\production\untitled1
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 6                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4290772992                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5830732                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122913754                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122913754                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Aladdin\eToken\PKIClient\x32;C:\Program Files\Aladdin\eToken\PKIClient\x64
+USERNAME=Антон
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 2 Stepping 0, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24520)
+
+CPU:total 6 (initial active 6) (6 cores per cpu, 1 threads per core) family 21 model 2 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1, fma
+
+Memory: 4k page, system-wide physical 16366M (2019M free)
+TotalPageFile size 18412M (AvailPageFile size 69M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 68M, peak: 322M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (11.0.6+8-LTS) for windows-amd64 JRE (11.0.6+8-LTS), built on Dec 11 2019 09:17:57 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
